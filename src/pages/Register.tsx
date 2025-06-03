@@ -15,7 +15,7 @@ export const Register = ({profile}: {profile: DomainProfile | null}): JSX.Elemen
     const [searchParams] = useSearchParams()
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [inviteCode, setInviteCode] = useState<string>("");
+    const [inviteCode, setInviteCode] = useState<string>(window.location.hash)
     const [captcha, setCaptcha] = useState<string>("")
     const [formData, setFormData] = useState<any>({})
 
